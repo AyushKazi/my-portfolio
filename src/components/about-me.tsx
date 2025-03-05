@@ -1,12 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
-import Section from "./common/section";
 
 const AboutMe = () => {
   return (
     <div
-      className="flex flex-col-reverse md:flex-row w-full    scroll-mt-[10rem] gap-6 md:gap-0 pb-10 lg:pb-14 mt-[1rem]  md:mt-[6rem]"
+      className="flex flex-col-reverse md:flex-row w-full    scroll-mt-[10rem] gap-6 md:gap-0 pb-10 lg:pb-14 mt-[1rem]   md:mt-[6rem]"
       id="about-me"
     >
       {/* desc */}
@@ -32,7 +31,7 @@ const AboutMe = () => {
       </div>
 
       {/* image */}
-      <div className=" md:w-1/3 flex gap-6 flex-col justify-center items-center">
+      <div className=" md:w-1/3 flex gap-6 flex-col justify-center items-center ">
         <div>
           <Image
             src={"/Kazi.jpg"}

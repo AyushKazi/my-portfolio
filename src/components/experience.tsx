@@ -29,7 +29,7 @@ const Experience = () => {
             >
               <h3 className="font-semibold capitalize ">{exp.title}</h3>
               <h4 className="">{exp.location}</h4>
-              <p className="!text-sm lg:!text-base text-gray-600">
+              <p className="!text-sm leading-6  text-gray-600">
                 {exp.description}
               </p>
             </VerticalTimelineElement>
