@@ -5,7 +5,7 @@ import SectionHeader from "./common/section-header";
 
 const Skills = () => {
   return (
-    <div className="pb-8 scroll-mt-[5rem] text-center  " id="skills">
+    <div className="pb-12 scroll-mt-[5rem] text-center  " id="skills">
       <SectionHeader>TechStack 💻</SectionHeader>
       <div className="flex flex-wrap justify-center max-w-3xl  items-center mx-auto">
         {techStack.map((tech, index) => (

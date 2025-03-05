@@ -9,7 +9,7 @@ const SectionHeader = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <h1 className="text-xl md:text-2xl lg:text-3xl xl:text-4xl capitalize pb-4 font-semibold text-center">
+    <h1 className="text-xl md:text-2xl tracking-wide lg:text-3xl xl:text-4xl capitalize pb-8 font-semibold text-center">
       {children}
     </h1>
   );
