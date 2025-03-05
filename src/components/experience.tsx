@@ -27,9 +27,11 @@ const Experience = () => {
               icon={exp.icon}
               iconStyle={{ background: "white", fontSize: "1.5rem" }}
             >
-              <h3 className="font-semibold capitalize">{exp.title}</h3>
+              <h3 className="font-semibold capitalize ">{exp.title}</h3>
               <h4 className="">{exp.location}</h4>
-              <p className="!text-base text-gray-600">{exp.description}</p>
+              <p className="!text-sm lg:!text-base text-gray-600">
+                {exp.description}
+              </p>
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
