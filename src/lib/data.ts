@@ -4,20 +4,20 @@ import { FaReact } from "react-icons/fa";
 
 export const experience = [
   {
-    title: "Front-End Web Developer Intern",
-    location: "Pokhara, Nepal",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "Jan 2024 - July 2024",
-  },
-  {
     title: "Front-End Web Developer",
     location: "Pokhara, Nepal",
     description:
       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
     icon: React.createElement(FaReact),
     date: "July 2024 - Feb 2025",
+  },
+  {
+    title: "Front-End Web Developer Intern",
+    location: "Pokhara, Nepal",
+    description:
+      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2024 - July 2024",
   },
 ];
 
@@ -28,6 +28,7 @@ export const projects = [
       "A website for women trekkers to find trekking partners, share experiences and plan trips.",
     tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
     href: "https://womenstrek.com/",
+    imageUrl: "/women.png",
     status: "In Progress",
   },
   {
@@ -37,13 +38,15 @@ export const projects = [
     tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
     href: "https://tishyandco.com.au/",
     status: "In Progress",
+    imageUrl: "/tishy.png",
   },
   {
-    title: "Ecommerce Web-App",
+    title: "ElectroHub Ecommerce Web-App",
     description:
       "A website for an ecommerce store. Customers can browse products, add to cart, checkout and leave reviews.",
     tech: ["React", "Tailwind", "Sequelize", "MySQL", "Express"],
-    href: "",
+    href: undefined,
     status: "In Progress",
+    imageUrl: "/electro.jpeg",
   },
 ];
