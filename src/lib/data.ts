@@ -20,3 +20,30 @@ export const experience = [
     date: "July 2024 - Feb 2025",
   },
 ];
+
+export const projects = [
+  {
+    title: "Women's Trek",
+    description:
+      "A website for women trekkers to find trekking partners, share experiences and plan trips.",
+    tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    href: "https://womenstrek.com/",
+    status: "In Progress",
+  },
+  {
+    title: "Tishy and Co",
+    description:
+      "A website for catering services. Customers can order food, book catering services and leave reviews.",
+    tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    href: "https://tishyandco.com.au/",
+    status: "In Progress",
+  },
+  {
+    title: "Ecommerce Web-App",
+    description:
+      "A website for an ecommerce store. Customers can browse products, add to cart, checkout and leave reviews.",
+    tech: ["React", "Tailwind", "Sequelize", "MySQL", "Express"],
+    href: "",
+    status: "In Progress",
+  },
+];
