@@ -23,8 +23,6 @@ export default Projects;
 export function ProjectCard({
   title,
   href,
-  tech,
-  status,
   description,
   imageUrl,
 }: ProjectCardProps) {

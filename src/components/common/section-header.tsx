@@ -1,7 +1,4 @@
 import React from "react";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { FaGithubSquare } from "react-icons/fa";
-import { HiDownload } from "react-icons/hi";
 
 const SectionHeader = ({
   children,

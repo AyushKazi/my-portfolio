@@ -1,6 +1,5 @@
 import { techStack } from "@/lib/techstack";
 import React from "react";
-import Section from "./common/section";
 import SectionHeader from "./common/section-header";
 
 const Skills = () => {

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import { Button } from "./ui/button";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+// import { Button } from "./ui/button";
+import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
 
@@ -17,7 +17,7 @@ const AboutMe = () => {
           Hi there! 👋🏻
         </h1>
         <h1 className="text-2xl md:text-3xl -mt-1 xl:text-5xl font-semibold">
-          I'm Ayush Kazi Shrestha 🙇🏻‍♂️
+          I&apos;m Ayush Kazi Shrestha 🙇🏻‍♂️
         </h1>
         <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-2xl text-sm lg:text-base ">
           I am a software developer with a passion for creating web
