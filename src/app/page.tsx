@@ -10,13 +10,11 @@ import React from "react";
 export default function Home() {
   return (
     <Section>
-      <div>
-        <AboutMe />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Contact />
-      </div>
+      <AboutMe />
+      <Projects />
+      <Skills />
+      <Experience />
+      <Contact />
     </Section>
   );
 }

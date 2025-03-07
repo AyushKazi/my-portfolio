@@ -1,19 +1,19 @@
 "use client";
 import { navdata } from "@/lib/navdata";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+// import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  // const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   return (
-    <nav className="sticky top-6 z-50  ">
-      <div className=" flex items-center justify-center h-[2.8rem] md:h-[3rem]  sm:px-6 lg:px-8">
+    <nav className="sticky top-6 z-50   ">
+      <div className=" flex items-center justify-center h-[2.8rem] md:h-[3rem]  sm:px-6 lg:px-8 ">
         {/* Desktop Navigation */}
-        <div className="flex items-center space-x-4 md:space-x-8 border bg-white shadow-sm  h-full px-8 md:px-16 rounded-full">
+        <div className="flex items-center space-x-4 md:space-x-8 border border-black/10 bg-white drop-shadow-sm  h-full px-8 md:px-16 rounded-full">
           {navdata.map((item) => (
             <Link
               key={item.title}

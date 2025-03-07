@@ -8,7 +8,7 @@ import { HiDownload } from "react-icons/hi";
 const AboutMe = () => {
   return (
     <div
-      className="flex flex-col-reverse md:flex-row w-full    scroll-mt-[10rem] gap-6 md:gap-0 pb-10 lg:pb-14 mt-[3rem]  md:mt-[6rem]"
+      className="flex flex-col-reverse md:flex-row w-full     scroll-mt-[10rem] gap-6 md:gap-0 pb-10 lg:pb-14 mt-[3rem]  md:mt-[6rem]"
       id="about-me"
     >
       {/* desc */}

@@ -7,7 +7,7 @@ type ProjectCardProps = (typeof projects)[number];
 
 const Projects = () => {
   return (
-    <div className=" scroll-mt-[5rem] pb-12" id="projects">
+    <div className=" scroll-mt-[5rem]  pb-10 lg:pb-14 mt-4" id="projects">
       <SectionHeader>Projects</SectionHeader>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
         {projects.map((project, index) => (

@@ -36,7 +36,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="  h-[60vh] pb-12 mt-4 scroll-mt-[5rem]" id="contact">
+    <div className="  pb-10 lg:pb-14 mt-4 scroll-mt-[5rem]" id="contact">
       <div className=" flex flex-col items-center justify-center">
         <SectionHeader>Contact 📞</SectionHeader>
 

@@ -10,7 +10,7 @@ import { experience } from "@/lib/data";
 
 const Experience = () => {
   return (
-    <div className=" scroll-mt-[5rem] pb-12" id="experience">
+    <div className=" scroll-mt-[5rem] pb-10 lg:pb-14 mt-4" id="experience">
       <SectionHeader>Experience 🚀</SectionHeader>
       <VerticalTimeline lineColor="">
         {experience.map((exp, index) => (
