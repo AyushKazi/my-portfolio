@@ -1,18 +1,22 @@
 export const techStack = [
-  "React",
+  "JavaScript",
   "TypeScript",
   "TailwindCSS",
+  "React",
+  "Next.js",
   "Node.js",
   "Express",
   "MongoDB",
+  "MySQL",
   "Sequelize",
   "Prisma",
-
-  "Next.js",
+  "React Query",
+  "Zustand",
+  "Redux Toolkit",
+  "Framer Motion",
 
   "Git",
   "GitHub",
-  "MySQL",
 
   "Vercel",
   "Firebase",

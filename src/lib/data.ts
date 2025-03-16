@@ -26,7 +26,7 @@ export const projects = [
     title: "Women's Trek",
     description:
       "A website for women trekkers to find trekking partners, share experiences and plan trips.",
-    tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    tech: ["Next.js", "Tailwind", "Shadcn"],
     href: "https://womenstrek.com/",
     imageUrl: "/women.png",
     status: "In Progress",
@@ -35,7 +35,7 @@ export const projects = [
     title: "Tishy and Co",
     description:
       "A website for catering services. Customers can order food, book catering services and leave reviews.",
-    tech: ["React", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    tech: ["React", "Tailwind", "Shadcn"],
     href: "https://tishyandco.com.au/",
     status: "In Progress",
     imageUrl: "/tishy.png",
@@ -48,5 +48,22 @@ export const projects = [
     href: undefined,
     status: "In Progress",
     imageUrl: "/electro.jpeg",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "A portfolio website showcasing my work, skills and experience.",
+    tech: ["Next.js", "Tailwind", "Shadcn", "Context API", "Framer Motion"],
+    href: undefined,
+    imageUrl: "/portfolio.png",
+  },
+  {
+    title: "Foodi",
+    description:
+      "A landing page for a restaurant. Customers can view and add foods to cart.",
+    tech: ["React", "Tailwind", "Shadcn", "Zustand", "Reacr-Query"],
+    href: "https://sample-project-nine-chi.vercel.app/",
+    status: "Ongoing",
+    imageUrl: "/foodi.png",
   },
 ];

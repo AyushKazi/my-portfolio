@@ -14,6 +14,7 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
 import { sendEmail } from "@/actions/send-email";
 import { toast } from "sonner";
+import Link from "next/link";
 
 const formSchema = z.object({
   email: z.string().min(1, { message: "Email is required" }).email(),
@@ -87,7 +88,15 @@ const Contact = () => {
         <SectionHeader>Contact 📞</SectionHeader>
 
         <h2 className="text-center text-sm -mt-5 pb-4">
-          You can contact me via phone or this contact form.
+          You can contact me directly at{" "}
+          <Link
+            className="text-black underline hover:text-blue-500 transition-all "
+            href="mailto:ayushkazishrestha@gmail.com"
+            target="_blank"
+          >
+            ayushkazishrestha@gmail.com
+          </Link>
+          &nbsp; or via this contact form.
         </h2>
 
         <div className="  w-[min(100%,38rem)]  p-4">
