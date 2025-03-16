@@ -33,10 +33,12 @@ const AboutMe = () => {
           I&apos;m Ayush Kazi Shrestha 🙇🏻‍♂️
         </h1>
         <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-2xl text-sm lg:text-base  ">
-          I am a software developer with a passion for creating web
-          applications. I have experience with JavaScript, React, Node.js, and
-          MongoDB. I am currently learning TypeScript and GraphQL. I am excited
-          to learn new technologies and improve my skills as a developer.
+          A frontend web developer with knowledge and experience with
+          JavaScript, Typescript, React, Next.js, Tailwind CSS and many more. I
+          am currently learning Framer Motion and I am always excited to learn
+          new technologies and improve my skills as a developer. Provide me with
+          an opportunity to work with you and I will make sure to deliver the
+          best possible solution.
         </p>
         <div className="mx-auto md:mx-0">
           <a
