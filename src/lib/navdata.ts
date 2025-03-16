@@ -2,31 +2,31 @@ export const navdata = [
   {
     id: 1,
     title: "About Me",
-    hash: "#about-me",
+    hash: "about-me",
     href: "/#about-me",
   },
   {
     id: 2,
-    title: "Skills",
-    hash: "#skills",
-    href: "/#skills",
+    title: "Projects",
+    hash: "projects",
+    href: "/#projects",
   },
   {
     id: 3,
-    title: "Projects",
-    hash: "#projects",
-    href: "/#projects",
+    title: "Skills",
+    hash: "skills",
+    href: "/#skills",
   },
   {
     id: 4,
     title: "Experience",
-    hash: "#experience",
+    hash: "experience",
     href: "/#experience",
   },
   {
     id: 5,
     title: "Contact",
-    hash: "#contact",
+    hash: "contact",
     href: "/#contact",
   },
-];
+] as const;

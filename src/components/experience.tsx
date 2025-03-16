@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,10 +7,25 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import SectionHeader from "./common/section-header";
 import { experience } from "@/lib/data";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/active-section-context";
 
 const Experience = () => {
+  const { inView, ref } = useInView({ threshold: 0.8 });
+
+  const { setActiveSection, activeSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("experience");
+    }
+  }, [inView]);
   return (
-    <div className=" scroll-mt-[5rem] pb-10 lg:pb-14 mt-4" id="experience">
+    <div
+      ref={ref}
+      className=" scroll-mt-[6rem] pb-10 lg:pb-14 mt-4"
+      id="experience"
+    >
       <SectionHeader>Experience 🚀</SectionHeader>
       <VerticalTimeline lineColor="">
         {experience.map((exp, index) => (

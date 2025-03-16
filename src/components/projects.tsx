@@ -1,13 +1,30 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import SectionHeader from "./common/section-header";
 import { projects } from "@/lib/data";
 import Image from "next/image";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/active-section-context";
 
 type ProjectCardProps = (typeof projects)[number];
 
 const Projects = () => {
+  const { inView, ref } = useInView({ threshold: 0.4 });
+
+  const { setActiveSection, activeSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("projects");
+    }
+  }, [inView]);
+
   return (
-    <div className=" scroll-mt-[5rem]  pb-10 lg:pb-14 mt-4" id="projects">
+    <div
+      className=" scroll-mt-[6rem]  pb-10 lg:pb-14 mt-4"
+      id="projects"
+      ref={ref}
+    >
       <SectionHeader>Projects</SectionHeader>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
         {projects.map((project, index) => (

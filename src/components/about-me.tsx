@@ -1,25 +1,38 @@
+"use client";
+import { useActiveSection } from "@/context/active-section-context";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 // import { Button } from "./ui/button";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { HiDownload } from "react-icons/hi";
+import { useInView } from "react-intersection-observer";
 
 const AboutMe = () => {
+  const { inView, ref } = useInView({ threshold: 0.3 });
+
+  const { setActiveSection, activeSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("about-me");
+    }
+  }, [inView]);
   return (
     <div
-      className="flex flex-col-reverse md:flex-row w-full     scroll-mt-[10rem] gap-6 md:gap-0 pb-10 lg:pb-14 mt-[3rem]  md:mt-[6rem]"
+      ref={ref}
+      className="flex flex-col-reverse justify-center items-center w-full     scroll-mt-[12rem]  md:gap-0  mt-[3rem]  "
       id="about-me"
     >
       {/* desc */}
-      <div className=" flex flex-col text-center md:text-left md:w-2/3 gap-4 md:gap-6  ">
-        <h1 className="text-lg md:text-xl lg:text-3xl font-semibold">
+      <div className=" flex flex-col items-center text-center  md:w-2/3 gap-4 md:gap-6  my-[2rem]  ">
+        <h1 className="text-lg md:text-xl lg:text-2xl font-semibold">
           Hi there! 👋🏻
         </h1>
         <h1 className="text-2xl md:text-3xl -mt-1 xl:text-5xl font-semibold">
           I&apos;m Ayush Kazi Shrestha 🙇🏻‍♂️
         </h1>
-        <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-2xl text-sm lg:text-base ">
+        <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-2xl text-sm lg:text-base  ">
           I am a software developer with a passion for creating web
           applications. I have experience with JavaScript, React, Node.js, and
           MongoDB. I am currently learning TypeScript and GraphQL. I am excited
@@ -45,7 +58,7 @@ const AboutMe = () => {
             alt=""
             height={300}
             width={300}
-            className="rounded-full border-black/10 shadow-amber-600 border-2 h-[150px] w-[150px] md:h-[200px] md:w-[200px] xl:h-[250px] xl:w-[250px] "
+            className="rounded-full border-black/10 shadow-amber-600 border-2 h-[150px] w-[150px] md:h-[200px] md:w-[200px]  "
           />
         </div>
         <div className="flex gap-4">

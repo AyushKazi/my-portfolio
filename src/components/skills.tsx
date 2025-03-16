@@ -1,11 +1,24 @@
+"use client";
 import { techStack } from "@/lib/techstack";
-import React from "react";
+import React, { useEffect } from "react";
 import SectionHeader from "./common/section-header";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/active-section-context";
 
 const Skills = () => {
+  const { inView, ref } = useInView({ threshold: 1 });
+
+  const { setActiveSection, activeSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("skills");
+    }
+  }, [inView]);
   return (
     <div
-      className="pb-10 lg:pb-14 scroll-mt-[5rem] text-center mt-4  "
+      ref={ref}
+      className="pb-10 lg:pb-14 scroll-mt-[6rem] text-center mt-4  "
       id="skills"
     >
       <SectionHeader>TechStack 💻</SectionHeader>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "./common/section-header";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -10,6 +10,8 @@ import { Button } from "./ui/button";
 import Loading from "./ui/loading";
 import { Textarea } from "./ui/textarea";
 import { FaPaperPlane } from "react-icons/fa";
+import { useInView } from "react-intersection-observer";
+import { useActiveSection } from "@/context/active-section-context";
 
 const formSchema = z.object({
   email: z.string().min(1, { message: "Email is required" }).email(),
@@ -19,6 +21,16 @@ const formSchema = z.object({
 export type ContactFormSchema = z.infer<typeof formSchema>;
 
 const Contact = () => {
+  const { inView, ref } = useInView({ threshold: 0.4 });
+
+  const { setActiveSection, activeSection } = useActiveSection();
+
+  useEffect(() => {
+    if (inView) {
+      setActiveSection("contact");
+    }
+  }, [inView]);
+
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<ContactFormSchema>({
@@ -36,7 +48,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="  pb-10 lg:pb-14 mt-4 scroll-mt-[5rem]" id="contact">
+    <div
+      ref={ref}
+      className="  pb-10 lg:pb-14 mt-4 scroll-mt-[6rem]"
+      id="contact"
+    >
       <div className=" flex flex-col items-center justify-center">
         <SectionHeader>Contact 📞</SectionHeader>
 
