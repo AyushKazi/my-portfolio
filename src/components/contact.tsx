@@ -12,6 +12,8 @@ import { Textarea } from "./ui/textarea";
 import { FaPaperPlane } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
+import { sendEmail } from "@/actions/send-email";
+import { toast } from "sonner";
 
 const formSchema = z.object({
   email: z.string().min(1, { message: "Email is required" }).email(),
@@ -41,10 +43,38 @@ const Contact = () => {
     },
   });
 
-  const handleSubmit = async (values: ContactFormSchema) => {
+  const handleSubmit = async (data: ContactFormSchema) => {
+    toast.dismiss();
     setIsSubmitting(true);
-    console.log(values);
-    setIsSubmitting(false);
+
+    // console.log(data);
+    try {
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        formData.append(key, value as string);
+      });
+      const response = await sendEmail(formData);
+
+      console.log(response, "from the form");
+
+      if (response.status === "success") {
+        toast.success("Email sent successfully!", { duration: 6000 });
+        form.reset({
+          email: "",
+
+          message: "",
+        });
+        setIsSubmitting(false);
+      } else {
+        toast.error("Failed to send email, please try again.", {
+          duration: 6000,
+        });
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      toast.error("Failed to send message");
+      setIsSubmitting(false);
+    }
   };
 
   return (
