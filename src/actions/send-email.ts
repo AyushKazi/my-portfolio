@@ -20,7 +20,7 @@ export const sendEmail = async (formData: FormData) => {
 
   try {
     // Set loading state to true
-    const loading = true;
+    // const loading = true;
 
     await resend.emails.send({
       from: "Portfolio Contact Form <onboarding@resend.dev>",
@@ -43,6 +43,6 @@ export const sendEmail = async (formData: FormData) => {
     return { status: "error", message: "Failed to send email." };
   } finally {
     // Set loading state to false after operation is complete
-    const loading = false;
+    // const loading = false;
   }
 };

@@ -5,7 +5,6 @@ import { projects } from "@/lib/data";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
-import { FaFacebook, FaReact } from "react-icons/fa";
 
 type ProjectCardProps = (typeof projects)[number];
 

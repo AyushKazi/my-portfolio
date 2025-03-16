@@ -74,6 +74,7 @@ const Contact = () => {
       }
     } catch (error) {
       toast.error("Failed to send message");
+      console.error("Error sending email:", error);
       setIsSubmitting(false);
     }
   };
