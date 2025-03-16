@@ -61,7 +61,7 @@ export const projects = [
     title: "Foodi",
     description:
       "A landing page for a restaurant. Customers can view and add foods to cart.",
-    tech: ["React", "Tailwind", "Shadcn", "Zustand", "Reacr-Query"],
+    tech: ["React", "Tailwind", "Shadcn", "Zustand", "React-Query"],
     href: "https://sample-project-nine-chi.vercel.app/",
     status: "Ongoing",
     imageUrl: "/foodi.png",

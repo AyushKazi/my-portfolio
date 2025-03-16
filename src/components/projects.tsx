@@ -26,7 +26,10 @@ const Projects = () => {
       ref={ref}
     >
       <SectionHeader>Projects</SectionHeader>
-      {/* <h2>Here are some of the projects that I have worked on.</h2> */}
+      <h2 className="mb-[2rem] -mt-3 text-sm lg:text-base text-center">
+        Here are some of the projects that I have worked on along with the
+        technologies I used.
+      </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
         {projects.map((project, index) => (
           <ProjectCard key={index} {...project} />

@@ -32,13 +32,19 @@ const AboutMe = () => {
         <h1 className="text-2xl md:text-3xl -mt-1 xl:text-5xl font-semibold">
           I&apos;m Ayush Kazi Shrestha 🙇🏻‍♂️
         </h1>
-        <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-2xl text-sm lg:text-base leading-relaxed  ">
-          A frontend web developer with knowledge and experience with
-          JavaScript, Typescript, React, Next.js, Tailwind CSS and many more. I
-          am currently learning Framer Motion and I am always excited to learn
-          new technologies and improve my skills as a developer. Provide me with
-          an opportunity to work with you and I will make sure to deliver the
-          best possible solution.
+        <p className="max-w-md mx-auto md:mx-0  lg:max-w-lg xl:max-w-3xl text-sm lg:text-base leading-relaxed  ">
+          A <span className="font-semibold">frontend web developer</span> with
+          knowledge and experience with&nbsp;
+          <span className="font-semibold">JavaScript</span>,{" "}
+          <span className="font-semibold">Typescript</span>,{" "}
+          <span className="font-semibold">React</span>,{" "}
+          <span className="font-semibold">Next.js</span>,{" "}
+          <span className="font-semibold">Tailwind CSS</span> and many more. I
+          am currently learning{" "}
+          <span className="font-semibold">Framer Motion</span> and I am always
+          excited to learn new technologies and improve my skills as a
+          developer. Provide me with an opportunity to work with you and I will
+          make sure to deliver the best possible solution.
         </p>
         <div className="mx-auto md:mx-0">
           <a
@@ -92,3 +98,9 @@ const socials = [
     href: "https://www.linkedin.com/in/ayush-kazi-shrestha-60074026b/",
   },
 ];
+
+export function techData({ tech }: { tech: string }) {
+  return (
+    <span className="py-1 px-3 bg-gray-200 rounded-lg text-xs">{tech}</span>
+  );
+}
