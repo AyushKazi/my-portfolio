@@ -35,7 +35,7 @@ export default function RootLayout({
           <Navbar />
           {children}
         </ActiveSectionContextProvider>
-        <Toaster />
+        <Toaster richColors closeButton position="top-right" />
       </body>
     </html>
   );
