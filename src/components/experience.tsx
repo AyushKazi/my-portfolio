@@ -13,13 +13,13 @@ import { useActiveSection } from "@/context/active-section-context";
 const Experience = () => {
   const { inView, ref } = useInView({ threshold: 0.8 });
 
-  const { setActiveSection, activeSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
     if (inView) {
       setActiveSection("experience");
     }
-  }, [inView]);
+  }, [inView, setActiveSection]);
   return (
     <div
       ref={ref}

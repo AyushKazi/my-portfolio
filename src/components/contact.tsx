@@ -23,13 +23,13 @@ export type ContactFormSchema = z.infer<typeof formSchema>;
 const Contact = () => {
   const { inView, ref } = useInView({ threshold: 0.4 });
 
-  const { setActiveSection, activeSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
     if (inView) {
       setActiveSection("contact");
     }
-  }, [inView]);
+  }, [inView, setActiveSection]);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 

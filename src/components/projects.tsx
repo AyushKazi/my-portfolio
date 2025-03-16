@@ -11,13 +11,13 @@ type ProjectCardProps = (typeof projects)[number];
 const Projects = () => {
   const { inView, ref } = useInView({ threshold: 0.4 });
 
-  const { setActiveSection, activeSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
     if (inView) {
       setActiveSection("projects");
     }
-  }, [inView]);
+  }, [inView, setActiveSection]);
 
   return (
     <div

@@ -11,13 +11,13 @@ import { useInView } from "react-intersection-observer";
 const AboutMe = () => {
   const { inView, ref } = useInView({ threshold: 0.3 });
 
-  const { setActiveSection, activeSection } = useActiveSection();
+  const { setActiveSection } = useActiveSection();
 
   useEffect(() => {
     if (inView) {
       setActiveSection("about-me");
     }
-  }, [inView]);
+  }, [inView, setActiveSection]);
   return (
     <div
       ref={ref}
