@@ -9,7 +9,11 @@ import { HiDownload } from "react-icons/hi";
 import { useInView } from "react-intersection-observer";
 
 const AboutMe = () => {
-  const { inView, ref } = useInView({ threshold: 0.3 });
+  const { inView, ref } = useInView({
+    threshold: 0.3,
+    rootMargin: "-10% 0px", // Makes detection a bit more aggressive
+    triggerOnce: false,
+  });
 
   const { setActiveSection } = useActiveSection();
 

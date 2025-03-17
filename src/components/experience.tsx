@@ -11,7 +11,11 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
 
 const Experience = () => {
-  const { inView, ref } = useInView({ threshold: 0.7 });
+  const { inView, ref } = useInView({
+    threshold: 0.7,
+    rootMargin: "-10% 0px", // Makes detection a bit more aggressive
+    triggerOnce: false,
+  });
 
   const { setActiveSection } = useActiveSection();
 

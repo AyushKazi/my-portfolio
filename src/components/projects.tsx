@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeader from "./common/section-header";
 import { projects } from "@/lib/data";
 import Image from "next/image";
@@ -9,7 +9,23 @@ import { useActiveSection } from "@/context/active-section-context";
 type ProjectCardProps = (typeof projects)[number];
 
 const Projects = () => {
-  const { inView, ref } = useInView({ threshold: 0.3 });
+  const [threshold, setThreshold] = useState(0.4);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.innerWidth < 640) {
+        setThreshold(0.2); // Lower threshold for better detection
+      } else {
+        setThreshold(0.4);
+      }
+    }
+  }, []);
+
+  const { inView, ref } = useInView({
+    threshold,
+    rootMargin: "-10% 0px",
+    triggerOnce: false, // Ensures re-triggering
+  });
 
   const { setActiveSection } = useActiveSection();
 
@@ -21,7 +37,7 @@ const Projects = () => {
 
   return (
     <div
-      className=" scroll-mt-[6rem]  pb-10 lg:pb-14 mt-4"
+      className=" scroll-mt-[6rem] min-h-[60vh]  pb-10 lg:pb-14 mt-4"
       id="projects"
       ref={ref}
     >

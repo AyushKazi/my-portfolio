@@ -6,7 +6,11 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
 
 const Skills = () => {
-  const { inView, ref } = useInView({ threshold: 1 });
+  const { inView, ref } = useInView({
+    threshold: 1,
+    rootMargin: "-10% 0px", // Makes detection a bit more aggressive
+    triggerOnce: false,
+  });
 
   const { setActiveSection } = useActiveSection();
 
