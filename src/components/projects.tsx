@@ -9,7 +9,7 @@ import { useActiveSection } from "@/context/active-section-context";
 type ProjectCardProps = (typeof projects)[number];
 
 const Projects = () => {
-  const { inView, ref } = useInView({ threshold: 0.4 });
+  const { inView, ref } = useInView({ threshold: 0.3 });
 
   const { setActiveSection } = useActiveSection();
 
