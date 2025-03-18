@@ -15,6 +15,7 @@ import { useActiveSection } from "@/context/active-section-context";
 import { sendEmail } from "@/actions/send-email";
 import { toast } from "sonner";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const formSchema = z.object({
   email: z.string().min(1, { message: "Email is required" }).email(),
@@ -88,7 +89,15 @@ const Contact = () => {
       <div className=" flex flex-col items-center justify-center">
         <SectionHeader>Contact 📞</SectionHeader>
 
-        <h2 className="text-center text-sm -mt-5 pb-4">
+        <motion.h2
+          className="text-center text-sm -mt-5 pb-4"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           You can contact me directly at{" "}
           <Link
             className="text-black underline hover:text-blue-500 transition-all "
@@ -98,9 +107,17 @@ const Contact = () => {
             ayushkazishrestha@gmail.com
           </Link>
           &nbsp; or via this contact form.
-        </h2>
+        </motion.h2>
 
-        <div className="  w-[min(100%,38rem)]  p-4">
+        <motion.div
+          className="  w-[min(100%,38rem)]  p-4"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           <Form {...form}>
             <form
               className="space-y-4"
@@ -153,7 +170,7 @@ const Contact = () => {
               </div>
             </form>
           </Form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

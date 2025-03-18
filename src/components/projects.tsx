@@ -5,11 +5,27 @@ import { projects } from "@/lib/data";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
+import { motion } from "framer-motion";
 
 type ProjectCardProps = (typeof projects)[number];
 
 const Projects = () => {
   const [threshold, setThreshold] = useState(0.4);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // Delay between each child animation
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -42,15 +58,28 @@ const Projects = () => {
       ref={ref}
     >
       <SectionHeader>Projects</SectionHeader>
-      <h2 className="mb-[2rem] -mt-3 text-sm lg:text-base text-center">
+      <motion.h2
+        className="mb-[2rem] -mt-3 text-sm lg:text-base text-center"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+      >
         Here are some of the projects that I have worked on along with the
         technologies I used.
-      </h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4">
+      </motion.h2>
+      <motion.div
+        variants={containerVariants}
+        className="grid sm:grid-cols-2 lg:grid-cols-3  gap-4"
+        initial="hidden"
+        whileInView="visible" // Triggers animation when in viewport
+        viewport={{ once: true }}
+      >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <motion.div variants={itemVariants} key={index}>
+            <ProjectCard key={index} {...project} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };

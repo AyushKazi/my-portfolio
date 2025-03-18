@@ -4,6 +4,22 @@ import React, { useEffect } from "react";
 import SectionHeader from "./common/section-header";
 import { useInView } from "react-intersection-observer";
 import { useActiveSection } from "@/context/active-section-context";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1, // Delay between each child animation
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20, scale: 0.9 },
+  visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.3 } },
+};
 
 const Skills = () => {
   const { inView, ref } = useInView({
@@ -11,6 +27,12 @@ const Skills = () => {
     rootMargin: "-10% 0px", // Makes detection a bit more aggressive
     triggerOnce: false,
   });
+
+  // const { inView: childrenView } = useInView({
+  //   threshold: 1,
+  //   rootMargin: "-10% 0px",
+  //   triggerOnce: true,
+  // });
 
   const { setActiveSection } = useActiveSection();
 
@@ -26,16 +48,23 @@ const Skills = () => {
       id="skills"
     >
       <SectionHeader>TechStack 💻</SectionHeader>
-      <div className="flex flex-wrap justify-center max-w-3xl  items-center mx-auto">
+      <motion.div
+        className="flex flex-wrap justify-center max-w-3xl  items-center mx-auto"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible" // Triggers animation when in viewport
+        viewport={{ once: true }} // Animate only when in view
+      >
         {techStack.map((tech, index) => (
-          <p
+          <motion.p
             key={index}
             className="px-4 py-2 m-2 text-sm bg-gray-100 shadow text-black/90 rounded-md"
+            variants={itemVariants}
           >
             {tech}
-          </p>
+          </motion.p>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
