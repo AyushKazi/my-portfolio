@@ -1,5 +1,6 @@
 import AboutMe from "@/components/about-me";
 import Section from "@/components/common/section";
+import SectionDivider from "@/components/common/section-divider";
 import Contact from "@/components/contact";
 import Experience from "@/components/experience";
 // import Navbar from "@/components/navbar";
@@ -28,16 +29,13 @@ export default function Home() {
     // </Section>
     <Section>
       <AboutMe />
-      <div className="border-1 border-black/20 h-[5rem] w-0 flex justify-center items-center mx-auto"></div>
+      <SectionDivider />
       <Projects />
-      <div className="border-1 border-black/20 h-[5rem] w-0 flex justify-center items-center mx-auto"></div>
-
+      <SectionDivider />
       <Skills />
-      <div className="border-1 border-black/20 h-[5rem] w-0 flex justify-center items-center mx-auto"></div>
-
+      <SectionDivider />
       <Experience />
-      <div className="border-1 border-black/20 h-[5rem] w-0 flex justify-center items-center mx-auto"></div>
-
+      <SectionDivider />
       <Contact />
     </Section>
   );
