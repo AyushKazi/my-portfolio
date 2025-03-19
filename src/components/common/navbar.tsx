@@ -18,16 +18,16 @@ const Navbar = () => {
         // transition={{ duration: 0.1 }}
       >
         {/* Desktop Navigation */}
-        <div className="flex items-center space-x-4 md:space-x-8 border border-black/10 bg-white drop-shadow-sm  h-full px-8 md:px-16 rounded-full">
+        <div className="flex items-center space-x-4 md:space-x-8 border border-foreground bg-background drop-shadow-sm  h-full px-8 md:px-16 rounded-full">
           {navdata.map((item) => (
             <Link
               key={item.title}
               href={item.href}
               className={cn(
-                "relative text-xs md:text-sm font-medium transition-colors hover:text-primary pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-primary after:transition-all after:duration-100",
+                "relative text-xs md:text-sm font-medium transition-colors hover:text-foreground pb-1 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:bg-foreground after:transition-all after:duration-100",
                 activeSection === item.hash
-                  ? "text-primary after:w-full"
-                  : "text-muted-foreground after:w-0 hover:after:w-full"
+                  ? "text-foreground after:w-full"
+                  : "text-foreground/70 after:w-0 hover:after:w-full"
               )}
             >
               {item.title}

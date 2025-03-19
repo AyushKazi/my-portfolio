@@ -76,10 +76,10 @@ const AboutMe = () => {
           <motion.span variants={letterVariants}>
             A <span className="font-semibold">frontend web developer</span> with
             experience in <span className="font-semibold">JavaScript</span>,
-            <span className="font-semibold">TypeScript</span>,
-            <span className="font-semibold">React</span>,
-            <span className="font-semibold">Next.js</span>,
-            <span className="font-semibold">Tailwind CSS</span>, and more. I am
+            <span className="font-semibold"> TypeScript</span>,
+            <span className="font-semibold"> React</span>,
+            <span className="font-semibold"> Next.js</span>,
+            <span className="font-semibold"> Tailwind CSS</span>, and more. I am
             currently learning{" "}
             <span className="font-semibold">Framer Motion</span> and always
             excited to explore new technologies and improve my skills as a
@@ -90,17 +90,17 @@ const AboutMe = () => {
         <motion.div
           className="mx-auto flex gap-4 md:mx-0"
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
           viewport={{ once: true }}
         >
           <motion.a
-            className="group text-white hover:scale-105 transition-all hover:bg-black/90 gap-2 w-fit bg-black/80 flex justify-center items-center  px-6 py-2 text-sm rounded-sm hover:cursor-pointer"
+            className="group transition-all bg-background/90 text-foreground border-foreground border gap-2 w-fit hover:scale-105 hover:shadow-md hover:shadow-white flex justify-center items-center  px-6 py-2 text-sm rounded-sm hover:cursor-pointer"
             download={true}
             href="/AyushKaziShresthaCV.pdf"
           >
             Download CV{" "}
-            <HiDownload className="group-hover:translate-y-1 transition-all" />
+            <HiDownload className="group-hover:scale-3d transition-all" />
           </motion.a>
           {/* <a
             className="group text-white hover:scale-105 transition-all hover:bg-black/90 gap-2 w-fit bg-black/80 flex justify-center items-center  px-6 py-2 text-sm rounded-sm hover:cursor-pointer"
@@ -138,7 +138,7 @@ const AboutMe = () => {
               href={social.href}
               target="_blank"
               key={index}
-              className="group border-2 hover:scale-105 transition-all border-black/20 rounded-full cursor-pointer p-2 hover:bg-black/10 bg-black/5"
+              className="group border-2 hover:scale-105 transition-all border-foreground/30 rounded-full cursor-pointer p-2 hover:bg-black/10 bg-black/5"
             >
               {social.icon}
             </Link>

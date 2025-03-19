@@ -37,18 +37,21 @@ const Experience = () => {
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{
-                background: "#f3f4f6",
+                background: "#0e0e0e",
+                border: "1px solid #9ca3af",
               }}
               contentArrowStyle={{
                 borderRight: "7px solid  #9ca3af",
               }}
               date={exp.date}
               icon={exp.icon}
-              iconStyle={{ background: "white", fontSize: "1.5rem" }}
+              iconStyle={{ background: "black", fontSize: "1.5rem" }}
             >
-              <h3 className="font-semibold capitalize ">{exp.title}</h3>
-              <h4 className="">{exp.location}</h4>
-              <p className="!text-sm leading-6  text-gray-600">
+              <h3 className="font-semibold capitalize text-foreground ">
+                {exp.title}
+              </h3>
+              <h4 className="text-foreground">{exp.location}</h4>
+              <p className="!text-sm leading-6  text-foreground">
                 {exp.description}
               </p>
             </VerticalTimelineElement>
