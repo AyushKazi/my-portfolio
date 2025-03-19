@@ -14,15 +14,15 @@ type ProjectCardProps = (typeof projects)[number];
 const Projects = () => {
   const [threshold, setThreshold] = useState(0.4);
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Delay between each child animation
-      },
-    },
-  };
+  // const containerVariants = {
+  //   hidden: { opacity: 0 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       staggerChildren: 0.2, // Delay between each child animation
+  //     },
+  //   },
+  // };
 
   // const itemVariants = {
   //   hidden: { opacity: 0, x: -20 },
