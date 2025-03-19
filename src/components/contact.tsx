@@ -96,11 +96,12 @@ const Contact = () => {
             opacity: 1,
             y: 0,
           }}
+          viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           You can contact me directly at{" "}
           <Link
-            className="text-black underline hover:text-blue-500 transition-all "
+            className="text-foreground underline hover:text-blue-500 transition-all "
             href="mailto:ayushkazishrestha@gmail.com"
             target="_blank"
           >
@@ -116,6 +117,7 @@ const Contact = () => {
             opacity: 1,
             y: 0,
           }}
+          viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
           <Form {...form}>
@@ -158,7 +160,7 @@ const Contact = () => {
               <div className=" text-center">
                 <Button
                   type="submit"
-                  className=" group hover:scale-105 bg-gray-900 text-center cursor-pointer  font-medium rounded-full hover:bg-black text-white w-[8rem]  "
+                  className=" group hover:scale-105 bg-background border border-foreground text-center cursor-pointer  font-medium rounded-full hover:bg-black text-white w-[8rem]  "
                 >
                   Submit &nbsp;{" "}
                   {isSubmitting ? (

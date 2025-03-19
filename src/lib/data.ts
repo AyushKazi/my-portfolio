@@ -1,22 +1,22 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
+import { SiNextdotjs } from "react-icons/si";
 
 export const experience = [
   {
     title: "Front-End Web Developer",
     location: "Pokhara, Nepal",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
+      "Worked on various project that involved building a website for a catering service, trekking, solar energies and electricals. Used Next.js, Tailwind, and Shadcn. Gained knowledge in client collaboration, enhancing user experience and enhancing SEO.",
+    icon: React.createElement(SiNextdotjs),
     date: "July 2024 - Feb 2025",
   },
   {
     title: "Front-End Web Developer Intern",
     location: "Pokhara, Nepal",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
+      "I worked as a front-end developer intern on a project that involved building a restaurant management system. Used React, Tailwind, and Firebase. Gained experience in working with a team and using version control.",
+    icon: React.createElement(FaReact),
     date: "Jan 2024 - July 2024",
   },
 ];
@@ -30,6 +30,7 @@ export const projects = [
     href: "https://womenstrek.com/",
     imageUrl: "/women.png",
     status: "In Progress",
+    github: undefined,
   },
   {
     title: "Tishy and Co",
@@ -39,23 +40,26 @@ export const projects = [
     href: "https://tishyandco.com.au/",
     status: "In Progress",
     imageUrl: "/tishy.png",
+    github: undefined,
   },
   {
-    title: "ElectroHub Ecommerce Web-App",
+    title: "ElectroHub ",
     description:
       "A website for an ecommerce store. Customers can browse products, add to cart, checkout and leave reviews.",
     tech: ["React", "Tailwind", "Sequelize", "MySQL", "Express"],
     href: undefined,
     status: "In Progress",
-    imageUrl: "/electro.jpeg",
+    imageUrl: "/electrohub.png",
+    github: "https://github.com/AyushKazi/FYP",
   },
   {
     title: "Portfolio",
     description:
       "A portfolio website showcasing my work, skills and experience.",
     tech: ["Next.js", "Tailwind", "Shadcn", "Context API", "Framer Motion"],
-    href: undefined,
+    href: "https://my-portfolio-alpha-three-87.vercel.app/",
     imageUrl: "/portfolio.png",
+    github: "https://github.com/AyushKazi/my-portfolio",
   },
   {
     title: "Foodi",
@@ -65,5 +69,6 @@ export const projects = [
     href: "https://sample-project-nine-chi.vercel.app/",
     status: "Ongoing",
     imageUrl: "/foodi.png",
+    github: "https://github.com/AyushKazi/Foodi",
   },
 ];

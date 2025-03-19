@@ -58,7 +58,7 @@ const Skills = () => {
         {techStack.map((tech, index) => (
           <motion.p
             key={index}
-            className="px-4 py-2 m-2 text-sm bg-gray-100 shadow text-black/90 rounded-md"
+            className="px-4 py-2 m-2 text-sm bg-background border border-foreground shadow text-foreground rounded-md"
             variants={itemVariants}
           >
             {tech}
