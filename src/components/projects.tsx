@@ -154,13 +154,13 @@ export function ProjectCard({
         <h3 className="max-w-xs !m-0 font-bold text-base">{title}</h3>
 
         {/* Fixed height and aspect ratio for consistent images */}
-        <div className="flex w-full h-[10rem] border border-black/20 rounded-lg my-4 overflow-hidden">
+        <div className="flex w-full h-[10rem] border border-white/20 rounded-lg my-4 overflow-hidden">
           <Image
             src={imageUrl}
             alt={title}
             width={300}
             height={300}
-            className="object-cover object-center w-full h-full"
+            className="object-cover  object-top w-full h-full"
           />
         </div>
 
