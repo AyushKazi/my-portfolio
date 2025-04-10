@@ -5,7 +5,7 @@ import { SiNextdotjs } from "react-icons/si";
 export const experience = [
   {
     title: "Front-End Web Developer",
-    location: "Pokhara, Nepal",
+    location: "Aarambha IT Research Center Pvt. Ltd.",
     description:
       "Worked on various project that involved building a website for a catering service, trekking, solar energies and electricals. Used Next.js, Tailwind, and Shadcn. Gained knowledge in client collaboration, enhancing user experience and enhancing SEO.",
     icon: React.createElement(SiNextdotjs),
@@ -13,7 +13,7 @@ export const experience = [
   },
   {
     title: "Front-End Web Developer Intern",
-    location: "Pokhara, Nepal",
+    location: "Everest Technologies Pvt. Ltd.",
     description:
       "I worked as a front-end developer intern on a project that involved building a restaurant management system. Used React, Tailwind, and Firebase. Gained experience in working with a team and using version control.",
     icon: React.createElement(FaReact),

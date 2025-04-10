@@ -47,10 +47,10 @@ const Experience = () => {
               icon={exp.icon}
               iconStyle={{ background: "black", fontSize: "1.5rem" }}
             >
-              <h3 className="font-semibold capitalize text-foreground ">
+              <h3 className="font-semibold capitalize text-foreground text-lg ">
                 {exp.title}
               </h3>
-              <h4 className="text-foreground">{exp.location}</h4>
+              <h4 className="text-muted-foreground">{exp.location}</h4>
               <p className="!text-sm leading-6  text-foreground">
                 {exp.description}
               </p>
