@@ -43,6 +43,16 @@ export const projects = [
     github: undefined,
   },
   {
+    title: "Elite Electric Nepal",
+    description:
+      "A website for an electrical company. Customers can browse products and inquire about them.",
+    tech: ["Next.js", "Tailwind", "Shadcn"],
+    href: "https://www.eliteelectricnepal.com/",
+    status: "On going",
+    imageUrl: "/elite.png",
+    github: undefined,
+  },
+  {
     title: "ElectroHub ",
     description:
       "A website for an ecommerce store. Customers can browse products, add to cart, checkout and leave reviews.",
